@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Sensibilización Ética de la IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sensibilización Ética de la IA en Entornos Escolares</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#actividades">Actividades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <p>La inteligencia artificial (IA) es una herramienta poderosa que puede transformar la educación. Sin embargo, es crucial promover su uso ético para proteger la privacidad, fomentar la equidad y desarrollar habilidades críticas en los estudiantes.</p>
+            <p>Este portafolio está diseñado para padres de familia, ofreciendo recursos y actividades para sensibilizar sobre el uso responsable de la IA en el hogar y la escuela.</p>
+            <img src="assets/ia-etica.svg" alt="Imagen representativa de IA ética" class="center-image">
+        </section>
+
+        <section id="recursos">
+            <h2>Recursos Académicos</h2>
+            <p>Aquí encontrarás mapas conceptuales y diagramas que explican conceptos clave de la ética en IA.</p>
+            <div class="mermaid">
+                graph TD
+                    A[IA Ética] --> B[Privacidad de Datos]
+                    A --> C[Equidad e Inclusión]
+                    A --> D[Transparencia]
+                    A --> E[Responsabilidad]
+                    B --> F[Proteger información personal]
+                    C --> G[Evitar sesgos]
+                    D --> H[Explicar decisiones de IA]
+                    E --> I[Usar IA para bien]
+            </div>
+            <p>Este mapa conceptual muestra los pilares fundamentales de la ética en IA.</p>
+        </section>
+
+        <section id="actividades">
+            <h2>Actividades para Padres e Hijos</h2>
+            <div class="actividad">
+                <h3>Discusión Familiar: ¿Qué es la IA?</h3>
+                <p>Reúnanse como familia y discutan qué entienden por inteligencia artificial. Usen ejemplos cotidianos como asistentes virtuales o recomendaciones en redes sociales.</p>
+                <button onclick="mostrarRespuesta('ia')">Mostrar Sugerencias</button>
+                <div id="respuesta-ia" class="respuesta" style="display:none;">
+                    <p>Sugerencias: Pregunten cómo la IA afecta la privacidad. ¿Qué datos compartimos sin darnos cuenta?</p>
+                </div>
+            </div>
+            <div class="actividad">
+                <h3>Juego de Roles: Uso Ético</h3>
+                <p>Simulen situaciones donde la IA se usa de manera ética o no ética, y discutan las consecuencias.</p>
+                <button onclick="mostrarRespuesta('roles')">Mostrar Sugerencias</button>
+                <div id="respuesta-roles" class="respuesta" style="display:none;">
+                    <p>Sugerencias: Escenario: Un estudiante usa IA para copiar en un examen. ¿Qué hacer?</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información o recursos adicionales, contacta al docente responsable.</p>
+            <p>Email: docente@escuela.edu</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portafolio de Sensibilización Ética de la IA. Desarrollado para padres de familia.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

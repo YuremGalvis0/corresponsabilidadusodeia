@@ -1,0 +1,133 @@
+/* Paleta de colores: Neutros, azules, grises */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro */
+    --secondary-color: #3498db; /* Azul claro */
+    --accent-color: #95a5a6; /* Gris */
+    --background-color: #ecf0f1; /* Gris claro */
+    --text-color: #34495e; /* Gris oscuro */
+    --highlight-color: #1abc9c; /* Verde azulado para acentos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.center-image {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.mermaid {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.actividad {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.respuesta {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-left: 4px solid var(--highlight-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    main {
+        padding: 1rem;
+    }
+}
