@@ -1,0 +1,809 @@
+/* Paleta de colores: Neutros, azules, grises */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro */
+    --secondary-color: #3498db; /* Azul claro */
+    --accent-color: #95a5a6; /* Gris */
+    --background-color: #ecf0f1; /* Gris claro */
+    --text-color: #34495e; /* Gris oscuro */
+    --highlight-color: #1abc9c; /* Verde azulado para acentos */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header-title-section h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.header-title-section .subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.3rem 0;
+    color: #ecf0f1;
+}
+
+.header-title-section .subtitle-secondary {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.3rem 0;
+    color: #bdc3c7;
+    font-style: italic;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: calc(100vh - 300px);
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.center-image {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.mermaid {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.actividad {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.respuesta {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-left: 4px solid var(--highlight-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem 1rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    border-top: 2px solid var(--secondary-color);
+    padding-top: 1.5rem;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.footer-section strong {
+    color: var(--highlight-color);
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.integrantes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.integrantes-list li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.integrantes-list li:before {
+    content: "✓ ";
+    color: var(--highlight-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.recurso-base {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.recurso-base h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.boton-recurso {
+    display: inline-block;
+    background-color: white;
+    color: #667eea;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.boton-recurso:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos para Sección de Contexto */
+.contexto-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.contexto-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.contexto-card:hover {
+    transform: translateY(-5px);
+}
+
+.contexto-card h4 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.contexto-card p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Estilos para Situación Problemática */
+.situacion-problematica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.paso {
+    background-color: #f8f9fa;
+    border-left: 5px solid #ff6b6b;
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.paso:nth-child(2) {
+    border-left-color: #ff8c42;
+}
+
+.paso:nth-child(3) {
+    border-left-color: #ffd93d;
+}
+
+.paso:nth-child(4) {
+    border-left-color: #6bcf7f;
+}
+
+.paso:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.paso h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.05rem;
+}
+
+.paso p {
+    margin: 0.5rem 0;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+/* Estilos para Sección de Diagnóstico */
+.hallazgo-principal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.hallazgo-principal p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.problemas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.problema-card {
+    background: white;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.problema-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
+}
+
+.problema-numero {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.problema-card h4 {
+    margin: 1rem;
+    margin-top: 0.5rem;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.problema-contenido {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.problema-contenido p {
+    margin: 0.7rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #34495e;
+}
+
+.problema-contenido p strong {
+    color: #2c3e50;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.riesgo-icon {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #856404;
+    text-align: center;
+}
+
+.problema-card:nth-child(1) .riesgo-icon {
+    border-left-color: #e74c3c;
+    background-color: #fadbd8;
+    color: #a93226;
+}
+
+.problema-card:nth-child(2) .riesgo-icon {
+    border-left-color: #e67e22;
+    background-color: #fad7a0;
+    color: #a04000;
+}
+
+.problema-card:nth-child(3) .riesgo-icon {
+    border-left-color: #3498db;
+    background-color: #d6eaf8;
+    color: #1b4965;
+}
+
+.problema-card:nth-child(4) .riesgo-icon {
+    border-left-color: #9b59b6;
+    background-color: #ebdef0;
+    color: #5b2c6f;
+}
+
+.sintesis-box {
+    background-color: #f8f9fa;
+    border-left: 5px solid #2980b9;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin: 1.5rem 0;
+}
+
+.sintesis-box p {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.sintesis-box strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* Estilos para Fundamentos Teóricos - Acordeones */
+.fundamentos-container {
+    margin: 2rem 0;
+}
+
+.accord {
+    margin-bottom: 1rem;
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.accord:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.accord-button {
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.accord-button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    padding-left: 2rem;
+}
+
+.accord-button h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.accord-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    min-width: 1.2rem;
+}
+
+.accord-button.active .accord-icon {
+    transform: rotate(90deg);
+}
+
+.accord-content {
+    display: none;
+    padding: 0;
+}
+
+.accord-content.active {
+    display: block;
+}
+
+.fundamento-texto {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    color: #34495e;
+    line-height: 1.8;
+}
+
+.fundamento-texto p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+.fundamento-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos para Referencias */
+.referencias-list {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.referencia {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.referencia:hover {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left-color: #667eea;
+}
+
+.referencia p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+}
+
+.referencia em {
+    color: #2c3e50;
+    font-style: italic;
+}
+
+/* Estilos para Escuela de Padres - Sesiones */
+.microcurriculo-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.info-card h4 {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.sesiones-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.sesion-card {
+    border: 2px solid #ecf0f1;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.sesion-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.sesion-button {
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.sesion-button:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    padding-left: 2rem;
+}
+
+.sesion-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.sesion-numero {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    min-width: 80px;
+}
+
+.sesion-icono {
+    font-size: 1.5rem;
+}
+
+.sesion-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.expand-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.sesion-button.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+.sesion-content {
+    display: none;
+    background-color: #f8f9fa;
+}
+
+.sesion-content.active {
+    display: block;
+}
+
+.sesion-body {
+    padding: 2rem;
+}
+
+.sesion-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+}
+
+.badge-identity {
+    background-color: #e74c3c;
+}
+
+.badge-sesgos {
+    background-color: #e67e22;
+}
+
+.badge-privacidad {
+    background-color: #3498db;
+}
+
+.badge-humanismo {
+    background-color: #9b59b6;
+}
+
+.badge-duracion {
+    background-color: #95a5a6;
+}
+
+.objetivo-section,
+.contenidos-section,
+.actividad-practica {
+    margin-bottom: 1.5rem;
+}
+
+.objetivo-section h4,
+.contenidos-section h4,
+.actividad-practica h4 {
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.contenidos-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contenidos-section li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    color: #34495e;
+    position: relative;
+}
+
+.contenidos-section li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.objetivo-section p,
+.actividad-practica p {
+    color: #34495e;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.actividad-practica p strong {
+    color: #2c3e50;
+}
+
+/* Sección de Evaluación */
+.evaluacion-section {
+    background-color: #f0f8ff;
+    border-left: 5px solid #3498db;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.evaluacion-section h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.evaluacion-box {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #d6eaf8;
+}
+
+.evaluacion-box p {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.evaluacion-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.item {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+    padding: 1.5rem;
+    border-left: 4px solid #27ae60;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.15);
+    transform: translateY(-3px);
+}
+
+.item h4 {
+    color: #27ae60;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.item p {
+    color: #34495e;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    main {
+        padding: 1rem;
+    }
+}
