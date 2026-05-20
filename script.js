@@ -44,11 +44,6 @@ function toggleAccord(button) {
     }
 }
 
-// Inicializar Mermaid
-document.addEventListener('DOMContentLoaded', function() {
-    mermaid.initialize({ startOnLoad: true });
-});
-
 // Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -57,4 +52,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+// Chat embebido dentro de la página
+function toggleChatPanel() {
+    const panel = document.getElementById('chatbot-panel');
+    panel.classList.toggle('open');
+    panel.setAttribute('aria-hidden', panel.classList.contains('open') ? 'false' : 'true');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({ startOnLoad: true });
+
+    const chatToggle = document.getElementById('chatbot-toggle');
+    const chatClose = document.getElementById('chatbot-close');
+    const chatPanel = document.getElementById('chatbot-panel');
+
+    if (chatToggle && chatClose && chatPanel) {
+        chatToggle.addEventListener('click', toggleChatPanel);
+        chatClose.addEventListener('click', toggleChatPanel);
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && chatPanel.classList.contains('open')) {
+                toggleChatPanel();
+            }
+        });
+    }
 });

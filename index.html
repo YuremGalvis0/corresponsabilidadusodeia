@@ -218,7 +218,7 @@
                 <!-- Módulo 1 -->
                 <div class="accord">
                     <button class="accord-button" onclick="toggleAccord(this)">
-                        <span class="accord-icon">▶</span>
+                        <span class="accord-icon"></span>
                         <h3>1. Riesgo de Desinformación para la Formación de Identidad</h3>
                     </button>
                     <div class="accord-content">
@@ -237,7 +237,7 @@
                 <!-- Módulo 2 -->
                 <div class="accord">
                     <button class="accord-button" onclick="toggleAccord(this)">
-                        <span class="accord-icon">▶</span>
+                        <span class="accord-icon"></span>
                         <h3>2. Brechas, Sesgos Algorítmicos y Exclusión</h3>
                     </button>
                     <div class="accord-content">
@@ -254,7 +254,7 @@
                 <!-- Módulo 3 -->
                 <div class="accord">
                     <button class="accord-button" onclick="toggleAccord(this)">
-                        <span class="accord-icon">▶</span>
+                        <span class="accord-icon"></span>
                         <h3>3. Vulnerabilidad de Datos Personales</h3>
                     </button>
                     <div class="accord-content">
@@ -273,7 +273,7 @@
                 <!-- Módulo 4 -->
                 <div class="accord">
                     <button class="accord-button" onclick="toggleAccord(this)">
-                        <span class="accord-icon">▶</span>
+                        <span class="accord-icon"></span>
                         <h3>4. Deshumanización en el Vínculo Educativo</h3>
                     </button>
                     <div class="accord-content">
@@ -655,6 +655,22 @@
             </div>
         </div>
     </footer>
+
+    <button type="button" class="chatbot-button" id="chatbot-toggle" aria-label="Abrir chat de Botpress">
+        <span class="chatbot-icon">💬</span>
+        <span class="chatbot-text">Chat IA</span>
+    </button>
+
+    <div class="chatbot-panel" id="chatbot-panel" aria-hidden="true">
+        <div class="chatbot-panel-header">
+            <div>
+                <strong>Chat IA</strong>
+                <p>Interactúa con el asistente dentro de la página.</p>
+            </div>
+            <button type="button" class="chatbot-close" id="chatbot-close" aria-label="Cerrar chat">✕</button>
+        </div>
+        <iframe class="chatbot-iframe" src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/05/12/23/20260512235702-08C3H85D.json" title="Chat Botpress" allow="microphone; camera; clipboard-write; clipboard-read; encrypted-media; fullscreen"></iframe>
+    </div>
 
     <script src="script.js"></script>
 </body>
