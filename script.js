@@ -44,6 +44,21 @@ function toggleAccord(button) {
     }
 }
 
+function toggleAllReferences() {
+    const buttons = document.querySelectorAll('#referencias .accord-button');
+    const allOpen = Array.from(buttons).every(btn => btn.classList.contains('active'));
+    buttons.forEach(btn => {
+        const content = btn.nextElementSibling;
+        if (allOpen) {
+            btn.classList.remove('active');
+            content.classList.remove('active');
+        } else {
+            btn.classList.add('active');
+            content.classList.add('active');
+        }
+    });
+}
+
 // Navegación suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
