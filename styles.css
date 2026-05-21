@@ -809,6 +809,27 @@ footer {
     line-height: 1.5;
 }
 
+/* Clase para destacar la frase 'ceguera digital' con buena legibilidad */
+.diagnostico-ceguera {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.55);
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Estilo para la instrucción del avatar */
+.avatar-instr {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffb74d;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    color: #5d4037;
+    margin-bottom: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav ul li {
@@ -884,6 +905,16 @@ footer {
     .chatbot-text {
         display: none;
     }
+}
+
+/* Banner de sesión (encabezado dentro del acordeón) */
+.session-banner {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 0 1rem 0;
 }
 
 .chatbot-panel {
